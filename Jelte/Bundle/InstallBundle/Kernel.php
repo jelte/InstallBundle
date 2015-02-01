@@ -13,7 +13,7 @@ abstract class Kernel extends \Symfony\Component\HttpKernel\Kernel
 {
     protected function doRegisterBundles(array $bundles)
     {
-        if ( !file_exists('app/config/parameters.yml') ) {
+        if ( !realpath(__DIR__.'/../../../../../../app/config/parameters.yml') ) {
             return array(
                 new \Jelte\Bundle\InstallBundle\InstallBundle()
             );
@@ -29,10 +29,9 @@ abstract class Kernel extends \Symfony\Component\HttpKernel\Kernel
      */
     public function boot()
     {
-        if ( file_exists('app/config/parameter.yml') ) {
+        if ( realpath(__DIR__.'/../../../../../../app/config/parameters.yml') ) {
             parent::boot();
         } else {
-
             // init container
             $this->container = new \Symfony\Component\DependencyInjection\Container();
             $this->container->set('kernel', $this);
