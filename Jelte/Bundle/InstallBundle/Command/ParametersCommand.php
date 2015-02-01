@@ -1,7 +1,7 @@
 <?php
 
 
-namespace Jelte\Bundle\InstallBundle\Console;
+namespace Jelte\Bundle\InstallBundle\Command;
 
 
 use Composer\IO\ConsoleIO;
@@ -16,7 +16,7 @@ class ParametersCommand extends Command
     protected function configure()
     {
         $this
-            ->setName('config:parameters')
+            ->setName('install:parameters')
             ->addOption('file', null, InputOption::VALUE_OPTIONAL, 'path to parameters.yml', 'app/config/parameters.yml')
             ->setDescription('');
     }
