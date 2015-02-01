@@ -1,5 +1,5 @@
 <?php
-namespace Jelte\InstallBundle;
+namespace Jelte\Bundle\InstallBundle;
 
 
 use Symfony\Component\HttpKernel\Bundle\Bundle;

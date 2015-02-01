@@ -6,6 +6,9 @@
             "email": "jelte@marlon.be"
         }
     ],
+    "autoload": {
+        "psr-0": { "Jelte\\Bundle\\InstallBundle": "" }
+    },
     "require": {
         "symfony/console": "~2.6",
         "composer/composer": "dev-master",
