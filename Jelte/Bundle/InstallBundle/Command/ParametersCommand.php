@@ -31,5 +31,7 @@ class ParametersCommand extends Command
         $processor->processFile(array(
             'file' => $input->getOption('file')
         ));
+
+        $output->writeln('Finished configuring paramaters.');
     }
 }
