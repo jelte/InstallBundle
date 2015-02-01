@@ -1,7 +1,7 @@
 <?php
 
 
-namespace InstallBundle\Console;
+namespace Jelte\InstallBundle\Console;
 
 
 use Composer\IO\ConsoleIO;
