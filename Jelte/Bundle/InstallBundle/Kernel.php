@@ -13,7 +13,7 @@ abstract class Kernel extends \Symfony\Component\HttpKernel\Kernel
 {
     protected function doRegisterBundles(array $bundles)
     {
-        if ( !file_exists('config/parameters.yml') ) {
+        if ( !file_exists('app/config/parameters.yml') ) {
             return array(
                 new \Jelte\Bundle\InstallBundle\InstallBundle()
             );
@@ -29,7 +29,7 @@ abstract class Kernel extends \Symfony\Component\HttpKernel\Kernel
      */
     public function boot()
     {
-        if ( file_exists('config/parameter.yml') ) {
+        if ( file_exists('app/config/parameter.yml') ) {
             parent::boot();
         } else {
 
